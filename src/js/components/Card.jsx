@@ -3,17 +3,27 @@ import {Button} from 'react-bootstrap';
 
 export default React.createClass({
   getInitialState() {
-    return {};
+    return {
+        front: true
+    };
   },
 
   flip() {
-      // TODO
+      this.setState({
+          front: !this.state.front
+      });
   },
 
   render() {
+      let text;
+      if (this.state.front) {
+          text = this.props.question;
+      } else {
+          text = this.props.answer;
+      }
     return (
         <div>
-            <p>{this.props.question}</p>
+            <p>{text}</p>
 
             <Button bsStyle="primary" onClick={this.flip}>
                 Flip
