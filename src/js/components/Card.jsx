@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
 
 export default React.createClass({
   getInitialState() {
@@ -14,9 +15,9 @@ export default React.createClass({
         <div>
             <p>{this.props.question}</p>
 
-            <button onClick={this.flip}>
+            <Button bsStyle="primary" onClick={this.flip}>
                 Flip
-            </button>
+            </Button>
         </div>
     );
   }
