@@ -17,9 +17,9 @@ export default React.createClass({
   render() {
       let text;
       if (this.state.front) {
-          text = this.props.question;
+          text = this.props.card.question;
       } else {
-          text = this.props.answer;
+          text = this.props.card.answer;
       }
     return (
         <div>
